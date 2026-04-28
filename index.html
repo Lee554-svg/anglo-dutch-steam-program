@@ -3,380 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1845년 영국-네덜란드 고압증기추진기관</title>
+<title>1845년 영국-네덜란드 해군 기관 보고서</title>
 
 <style>
-:root{
-  --bg:#0b0c0d;
-  --card:#1b1712;
-  --card2:#241e16;
-  --gold:#d9b56d;
-  --line:#7d6945;
-  --text:#eee3cf;
-  --muted:#b8aa91;
-  --red:#9d3d32;
-  --blue:#5c89a8;
-}
-*{box-sizing:border-box}
 body{
   margin:0;
-  background:radial-gradient(circle at top,#2d2518,#0b0c0d 55%);
-  color:var(--text);
-  font-family:"Noto Serif KR","Apple SD Gothic Neo",serif;
-  line-height:1.75;
+  background:#0a0a0a;
+  color:#eee;
+  font-family:Georgia, "Noto Serif KR", serif;
+  line-height:1.7;
 }
 header{
-  padding:90px 20px;
   text-align:center;
-  border-bottom:1px solid var(--line);
-}
-.badge{
-  display:inline-block;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  padding:7px 14px;
-  letter-spacing:2px;
-  margin-bottom:22px;
+  padding:100px 20px;
+  border-bottom:1px solid #444;
 }
 h1{
-  font-size:clamp(36px,7vw,78px);
-  line-height:1.1;
+  font-size:64px;
   margin:0;
+  letter-spacing:2px;
 }
 .subtitle{
-  max-width:780px;
-  margin:24px auto 0;
-  color:var(--muted);
-  font-size:19px;
-}
-nav{
-  position:sticky;
-  top:0;
-  background:rgba(10,10,10,.92);
-  backdrop-filter:blur(8px);
-  padding:12px;
-  text-align:center;
-  border-bottom:1px solid #3d3323;
-  z-index:10;
-}
-nav a{
-  color:var(--gold);
-  text-decoration:none;
-  margin:0 8px;
-  font-size:14px;
+  margin-top:20px;
+  color:#aaa;
 }
 main{
-  max-width:1120px;
+  max-width:1000px;
   margin:auto;
-  padding:42px 18px;
+  padding:40px 20px;
 }
-section{margin-bottom:70px}
+section{
+  margin-bottom:70px;
+}
 h2{
-  color:var(--gold);
-  font-size:32px;
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid #555;
   padding-bottom:10px;
 }
-h3{color:#f0cf85}
 .card{
-  background:linear-gradient(180deg,var(--card2),var(--card));
-  border:1px solid #5d4e35;
-  padding:22px;
-  margin:16px 0;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:16px;
-}
-.small{
-  color:var(--muted);
-}
-.warning{
-  border-left:5px solid var(--red);
-  background:#21110f;
-  padding:18px;
-  margin:18px 0;
+  border:1px solid #444;
+  padding:20px;
+  margin:15px 0;
+  background:#151515;
 }
 .diagram{
-  background:#080808;
-  border:1px solid var(--line);
+  background:#000;
+  border:1px solid #555;
   padding:20px;
-  overflow-x:auto;
   font-family:monospace;
   white-space:pre;
-  color:#ead9b8;
+  overflow-x:auto;
 }
-.flow{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:12px;
+.notice{
+  text-align:center;
+  padding:10px;
+  background:#111;
+  border-bottom:1px solid #333;
+  font-size:13px;
+  color:#888;
 }
-.step{
-  background:#15120e;
-  border:1px solid #5d4e35;
-  padding:16px;
-}
-.step b{
-  color:var(--gold);
-}
-.part{
-  border-left:4px solid var(--blue);
-  padding-left:15px;
-}
-.goodbad{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:16px;
-}
-.ok{border-left:5px solid #6fa86b}
-.no{border-left:5px solid var(--red)}
 footer{
   text-align:center;
-  color:var(--muted);
-  padding:35px;
-  border-top:1px solid #3d3323;
+  padding:30px;
+  color:#777;
+  border-top:1px solid #444;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="badge">가상 해군기술 문서 · 1845</div>
-  <h1>영국-네덜란드<br>고압증기추진기관 계획</h1>
-  <p class="subtitle">
-    1845년, 네덜란드와 영국이 공동으로 실험했다는 설정의
-    대체역사 해군용 고압증기추진기관 자료관입니다.
-    실제 제작용 도면이 아니라, 세계관 설명용 개념 문서입니다.
-  </p>
-</header>
+<div class="notice">
+본 문서는 대체역사 설정을 기반으로 작성된 해군 기술 자료이다.
+</div>
 
-<nav>
-  <a href="#summary">요약</a>
-  <a href="#flow">작동 원리</a>
-  <a href="#diagram">설계도</a>
-  <a href="#parts">부품 설명</a>
-  <a href="#ship">적용 함선</a>
-  <a href="#realism">현실성</a>
-</nav>
+<header>
+  <h1>고압 증기 추진 기관 보고서</h1>
+  <p class="subtitle">1845년 영국-네덜란드 공동 해군 기술위원회</p>
+</header>
 
 <main>
 
-<section id="summary">
-  <h2>1. 한눈에 보는 요약</h2>
+<section>
+  <h2>Ⅰ. 개요</h2>
   <div class="card">
     <p>
-      이 기관은 기존의 단순한 증기기관보다 더 강한 힘을 내기 위해,
-      증기를 한 번만 쓰고 버리지 않고 두 단계로 나누어 사용하는
-      실험형 해군 기관입니다.
+      본 문서는 고압 증기를 이용한 신형 해군 추진 기관의 구조 및 작동 원리를
+      정리한 것이다. 해당 기관은 기존 해군용 증기기관 대비 높은 추진 효율과
+      출력 확보를 목적으로 설계되었으며, 스크루 프로펠러를 이용한 함선 추진에
+      적용된다.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Ⅱ. 작동 원리</h2>
+
+  <div class="card">
+    <p>
+      연소실에서 발생한 열은 보일러 내의 물을 가열하여 고압 증기를 생성한다.
+      생성된 증기는 고압 실린더에 유입되어 피스톤을 구동하며, 이후 남은 증기는
+      저압 실린더로 이동하여 추가적인 동력을 발생시킨다.
     </p>
     <p>
-      먼저 강한 증기가 작은 고압 실린더를 밀고,
-      남은 증기가 다시 큰 저압 실린더를 밀며,
-      그 왕복운동이 축을 돌려 스크루 프로펠러를 회전시킵니다.
+      두 실린더에서 발생한 왕복 운동은 크랭크축을 통해 회전 운동으로 변환되며,
+      이 회전력은 추진축을 따라 전달되어 스크루 프로펠러를 회전시킨다.
     </p>
   </div>
 
-  <div class="grid">
-    <div class="card">
-      <h3>목표</h3>
-      <p>장갑을 단 실험함을 움직일 만큼 강한 해군용 기관 만들기.</p>
-    </div>
-    <div class="card">
-      <h3>장점</h3>
-      <p>연료를 더 효율적으로 쓰고, 외륜보다 전투에 강한 스크루를 사용함.</p>
-    </div>
-    <div class="card">
-      <h3>문제</h3>
-      <p>폭발 위험, 진동, 고장, 정비 난이도가 너무 높음.</p>
-    </div>
-  </div>
 </section>
 
-<section id="flow">
-  <h2>2. 작동 원리</h2>
-
-  <div class="flow">
-    <div class="step">
-      <b>① 석탄 연소</b>
-      <p>화실에서 석탄을 태워 보일러를 가열합니다.</p>
-    </div>
-    <div class="step">
-      <b>② 증기 발생</b>
-      <p>보일러 안의 물이 증기로 바뀌며 압력을 만듭니다.</p>
-    </div>
-    <div class="step">
-      <b>③ 고압 실린더</b>
-      <p>강한 증기가 첫 번째 피스톤을 밀어 큰 힘을 냅니다.</p>
-    </div>
-    <div class="step">
-      <b>④ 저압 실린더</b>
-      <p>남은 증기를 한 번 더 사용해 힘을 보충합니다.</p>
-    </div>
-    <div class="step">
-      <b>⑤ 축 회전</b>
-      <p>피스톤의 왕복운동이 크랭크축을 통해 회전운동으로 바뀝니다.</p>
-    </div>
-    <div class="step">
-      <b>⑥ 추진</b>
-      <p>추진축이 스크루 프로펠러를 돌려 함선을 앞으로 밉니다.</p>
-    </div>
-  </div>
-</section>
-
-<section id="diagram">
-  <h2>3. 보기 쉬운 개념 설계도</h2>
-
-  <div class="warning">
-    이 도면은 실제 제작용이 아닙니다.
-    정확한 압력, 치수, 재료, 리벳 간격, 보일러 구조는 의도적으로 생략했습니다.
-  </div>
+<section>
+  <h2>Ⅲ. 기관 배치도</h2>
 
   <div class="diagram">
 [석탄 저장고]
      │
      ▼
-[화실 / 연소실]
-     │   석탄을 태워 열을 만듦
+[연소실]
+     │
      ▼
 [보일러]
-     │   물을 증기로 바꿈
+     │
      ▼
 [고압 실린더]
-     │   강한 증기가 1차로 피스톤을 밈
+     │
      ▼
 [저압 실린더]
-     │   남은 증기가 2차로 피스톤을 밈
+     │
      ▼
 [복수기]
-     │   증기를 식혀 다시 물로 만듦
+     │
      ▼
-[급수펌프]
-     │   물을 다시 보일러로 보냄
+[급수 펌프]
+     │
      └───────────────┐
                      │
                      ▼
               [크랭크축]
-                     │   왕복운동을 회전운동으로 변환
+                     │
                      ▼
               [추진축]
                      │
                      ▼
               [스크루 프로펠러]
-                     │
-                     ▼
-              함선 전진
   </div>
 
   <div class="card">
-    <h3>이 설계도의 핵심</h3>
     <p>
-      핵심은 “증기를 두 번 쓴다”는 점입니다.
-      고압 실린더에서 힘을 한 번 얻고, 저압 실린더에서 남은 힘을 다시 얻습니다.
-      그래서 같은 석탄으로 더 오래 움직일 수 있다는 설정이 가능합니다.
+      상기 배치는 기관실 중심부에 보일러 및 실린더를 배치하고,
+      선미 방향으로 추진축을 연결하는 구조를 따른다.
     </p>
   </div>
+
 </section>
 
-<section id="parts">
-  <h2>4. 부품별 설명</h2>
-
-  <div class="grid">
-    <div class="card part">
-      <h3>보일러</h3>
-      <p>
-        기관의 심장입니다. 물을 증기로 바꾸는 장치입니다.
-        하지만 이 시대 기술로는 고압 운용이 위험해서 폭발 사고의 원인이 됩니다.
-      </p>
-    </div>
-
-    <div class="card part">
-      <h3>고압 실린더</h3>
-      <p>
-        가장 강한 증기를 처음 받는 부분입니다.
-        크기는 비교적 작지만 큰 힘을 먼저 받아 기관 전체의 출력을 끌어올립니다.
-      </p>
-    </div>
-
-    <div class="card part">
-      <h3>저압 실린더</h3>
-      <p>
-        고압 실린더를 지난 증기를 다시 받습니다.
-        남은 힘을 회수하는 장치라서 연료 효율을 높이는 역할을 합니다.
-      </p>
-    </div>
-
-    <div class="card part">
-      <h3>복수기</h3>
-      <p>
-        증기를 식혀 물로 되돌립니다.
-        바닷물을 계속 새로 쓰면 보일러가 망가지기 때문에 중요한 장치입니다.
-      </p>
-    </div>
-
-    <div class="card part">
-      <h3>크랭크축</h3>
-      <p>
-        피스톤이 앞뒤로 움직이는 힘을 회전하는 힘으로 바꿉니다.
-        진동과 충격을 많이 받아 고장 위험이 큽니다.
-      </p>
-    </div>
-
-    <div class="card part">
-      <h3>스크루 프로펠러</h3>
-      <p>
-        외륜보다 전투에 유리합니다.
-        선체 아래쪽에 있어 포격에 덜 노출되고, 장갑함과도 잘 어울립니다.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="ship">
-  <h2>5. 적용 가능한 함선</h2>
+<section>
+  <h2>Ⅳ. 주요 구성 요소</h2>
 
   <div class="card">
-    <h3>HNLMS 실험철갑포함</h3>
-    <p>
-      이 기관은 라 글루아르급 대양 철갑함을 바로 만들기에는 부족합니다.
-      대신 항구 방어, 식민지 시위, 연안 전투에 쓰는 실험철갑포함에 어울립니다.
-    </p>
-    <p>
-      즉, 이 배는 완성된 전함이 아니라 “너무 이른 시대에 나온 위험한 시제품”입니다.
-      전투에서 무섭긴 하지만, 오래 굴리면 기관부가 먼저 사람을 배신합니다.
-    </p>
+    <h3>보일러</h3>
+    <p>연소실에서 발생한 열을 이용하여 물을 증기로 전환하는 장치이다.</p>
   </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>장갑</h3>
-      <p>전면 전체가 아니라 기관실, 탄약고, 측면 일부만 제한적으로 보호합니다.</p>
-    </div>
-    <div class="card">
-      <h3>임무</h3>
-      <p>대양 결전보다 항구 방어, 해협 통제, 식민지 압박에 적합합니다.</p>
-    </div>
-    <div class="card">
-      <h3>약점</h3>
-      <p>무겁고 느리며, 장거리 항해 중 기관 고장이 자주 발생합니다.</p>
-    </div>
-  </div>
-</section>
 
   <div class="card">
-    <h3>최종 설정 문장</h3>
+    <h3>고압 실린더</h3>
+    <p>최초로 증기를 받아 피스톤을 구동하는 장치이다.</p>
+  </div>
+
+  <div class="card">
+    <h3>저압 실린더</h3>
+    <p>고압 실린더를 통과한 증기를 이용하여 추가 동력을 생성한다.</p>
+  </div>
+
+  <div class="card">
+    <h3>복수기</h3>
+    <p>증기를 냉각시켜 다시 물로 변환하는 장치이다.</p>
+  </div>
+
+  <div class="card">
+    <h3>크랭크축</h3>
+    <p>왕복 운동을 회전 운동으로 변환하는 핵심 기계 장치이다.</p>
+  </div>
+
+  <div class="card">
+    <h3>스크루 프로펠러</h3>
+    <p>회전력을 이용하여 함선을 전진시키는 추진 장치이다.</p>
+  </div>
+
+</section>
+
+<section>
+  <h2>Ⅴ. 적용 함선</h2>
+
+  <div class="card">
     <p>
-      “1845년 영국-네덜란드 고압증기추진기관 계획은 실패한 발명이 아니라,
-      너무 일찍 성공해버린 위험한 실험이었다.”
+      본 기관은 스크루 추진 방식을 채택한 증기 함선에 적용되며,
+      장갑을 부분적으로 적용한 실험적 군함에 우선 배치된다.
     </p>
   </div>
+
+</section>
+
+<section>
+  <h2>Ⅵ. 결론</h2>
+
+  <div class="card">
+    <p>
+      본 기관은 기존 증기 추진 체계를 기반으로 개선된 구조를 채택하여,
+      향후 해군 함선의 동력 체계 발전에 기여할 것으로 판단된다.
+    </p>
+  </div>
+
 </section>
 
 </main>
 
 <footer>
-  1845 영국-네덜란드 고압증기추진기관 계획 · 대체역사 설정자료
+1845년 해군 기술위원회 문서 · 영국-네덜란드 공동 작성
 </footer>
 
 </body>
