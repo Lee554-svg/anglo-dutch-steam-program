@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anglo-Dutch Steam Engine Program</title>
+
+<style>
+:root {
+  --bg: #0b0c0d;
+  --paper: #17130f;
+  --card: #1f1a14;
+  --line: #8b7650;
+  --gold: #d6b36a;
+  --text: #eee3cf;
+  --muted: #b8aa91;
+  --red: #9e3b2f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, #2b2418 0%, #0b0c0d 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+header {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.85)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,.03) 0px,
+      rgba(255,255,255,.03) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 6px 12px;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  font-size: clamp(42px, 8vw, 92px);
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  max-width: 760px;
+  margin: 28px auto 0;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11,12,13,.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #3b3325;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+nav a {
+  color: var(--gold);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 18px;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+h2 {
+  font-size: 34px;
+  color: var(--gold);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #f0cf85;
+  margin-top: 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: linear-gradient(180deg, #241e16, #17130f);
+  border: 1px solid #5c4d34;
+  padding: 22px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.28);
+}
+
+.label {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.warning {
+  border-left: 5px solid var(--red);
+  background: #21110f;
+  padding: 18px 22px;
+  color: #f0d5c8;
+}
+
+pre {
+  background: #050505;
+  border: 1px solid #5c4d34;
+  color: #e9d8b8;
+  padding: 22px;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+.timeline {
+  border-left: 2px solid var(--line);
+  padding-left: 24px;
+}
+
+.event {
+  margin-bottom: 25px;
+}
+
+.event strong {
+  color: var(--gold);
+}
+
+.spec {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px dashed #5c4d34;
+  padding: 10px 0;
+}
+
+.spec span:first-child {
+  color: var(--muted);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+  border-top: 1px solid #3b3325;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <div class="badge">CONFIDENTIAL NAVAL ARCHIVE · 1845</div>
+    <h1>Anglo-Dutch<br>Steam Engine Program</h1>
+    <p class="subtitle">
+      A fictional archival dossier on the joint British–Dutch attempt to adapt
+      high-pressure marine propulsion for experimental armored vessels.
+    </p>
+  </div>
+</header>
+
+<nav>
+  <a href="#overview">Overview</a>
+  <a href="#engine">Engine</a>
+  <a href="#layout">Layout</a>
+  <a href="#vessel">Vessel</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#notes">Notes</a>
+</nav>
+
+<main>
+
+<section id="overview">
+  <h2>Project Overview</h2>
+  <div class="card">
+    <p>
+      The Anglo-Dutch Steam Engine Program was a speculative 1845 naval research
+      initiative. Its purpose was not to produce a fully mature ocean-going
+      ironclad, but to test whether a more powerful marine engine could support
+      partial armor, screw propulsion, and heavier naval artillery.
+    </p>
+    <p>
+      The British side contributed experience with marine engineering, industrial
+      ironwork, and screw-propeller trials. The Dutch side supplied colonial
+      naval requirements, dockyard access, and the political need for a compact
+      but intimidating experimental warship.
+    </p>
+  </div>
+</section>
+
+<section id="engine">
+  <h2>Experimental Engine Concept</h2>
+
+  <div class="grid">
+    <div class="card">
+      <div class="label">Engine Class</div>
+      <h3>Early Compound Marine Engine</h3>
+      <p>
+        Steam first enters a high-pressure cylinder, then passes into a larger
+        low-pressure cylinder. This allows the same steam charge to be used twice,
+        improving endurance without requiring exact modern engineering standards.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">Propulsion</div>
+      <h3>Screw Propeller</h3>
+      <p>
+        The screw is protected beneath the stern and is less exposed than paddle
+        wheels. This makes it more suitable for a warship expected to face cannon
+        fire, rough seas, and armored weight.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">Problem</div>
+      <h3>Unstable Reliability</h3>
+      <p>
+        The engine is powerful in theory but difficult to maintain. Boiler stress,
+        sealing problems, vibration, and poor battlefield repairability make it
+        unsuitable for safe mass deployment.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="layout">
+  <h2>Conceptual Machinery Layout</h2>
+
+  <div class="warning">
+    This diagram is fictional and non-buildable. It intentionally omits exact
+    pressure values, dimensions, materials, tolerances, and fabrication details.
+  </div>
+
+<pre>
+                   ANGLO-DUTCH EXPERIMENTAL MARINE ENGINE
+
+ [Coal Bunker]
+       │
+       ▼
+ [Firebox / Furnace]
+       │
+       ▼
+ [Marine Boiler Assembly]
+       │
+       │  generated steam
+       ▼
+ [High-Pressure Cylinder]
+       │
+       │  partially expanded steam
+       ▼
+ [Low-Pressure Cylinder]
+       │
+       │  exhaust steam
+       ▼
+ [Surface Condenser] ───────▶ [Hotwell]
+       ▲                         │
+       │                         ▼
+       └────────────── [Feed Pump System]
+
+                piston motion
+                     │
+                     ▼
+              [Crankshaft]
+                     │
+                     ▼
+              [Main Shaft]
+                     │
+                     ▼
+              [Screw Propeller]
+</pre>
+
+  <h3>Functional Reading</h3>
+  <p>
+    Coal heats water in the boiler assembly. Steam drives the first cylinder,
+    then expands again through a second cylinder. The condenser recovers water,
+    while the crankshaft converts piston movement into rotation for the screw
+    propeller.
+  </p>
+</section>
+
+<section id="vessel">
+  <h2>Proposed Test Vessel</h2>
+
+  <div class="card">
+    <h3>HNLMS Proefneming</h3>
+    <p>
+      The proposed vessel is not a true La Gloire-style oceanic ironclad. It is
+      better understood as a transitional armored steam corvette: part experiment,
+      part colonial intimidation weapon, and part floating engineering disaster.
+    </p>
+
+    <div class="spec">
+      <span>Role</span>
+      <span>Experimental armored steam vessel</span>
+    </div>
+    <div class="spec">
+      <span>Armor concept</span>
+      <span>Partial belt and machinery protection</span>
+    </div>
+    <div class="spec">
+      <span>Primary mission</span>
+      <span>Coastal defense and colonial demonstration</span>
+    </div>
+    <div class="spec">
+      <span>Secondary mission</span>
+      <span>Testing screw propulsion under armored load</span>
+    </div>
+    <div class="spec">
+      <span>Major weakness</span>
+      <span>Engine fragility and excessive maintenance demand</span>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2>Development Timeline</h2>
+
+  <div class="timeline">
+    <div class="event">
+      <strong>1845 — Joint Memorandum</strong>
+      <p>
+        British engineers and Dutch naval officials agree to study a compact
+        high-power marine engine for armored experimental vessels.
+      </p>
+    </div>
+
+    <div class="event">
+      <strong>1846 — Dockyard Trials</strong>
+      <p>
+        Static engine tests show promising power, but vibration and boiler strain
+        create doubts about long-distance naval use.
+      </p>
+    </div>
+
+    <div class="event">
+      <strong>1847 — Armored Load Experiments</strong>
+      <p>
+        Partial armor is added to a test hull. Performance declines sharply, but
+        the vessel remains useful as a coastal demonstration platform.
+      </p>
+    </div>
+
+    <div class="event">
+      <strong>1848 — Political Review</strong>
+      <p>
+        The program is judged too unstable for fleet adoption. However, its data
+        influences later Dutch and British thinking on armored steam warships.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="notes">
+  <h2>Historical Plausibility Notes</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>What Is Plausible?</h3>
+      <p>
+        A joint experimental program, a screw-driven test vessel, partial armor,
+        and dangerous engine trials all fit the technological atmosphere of the
+        1840s.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>What Is Not Plausible?</h3>
+      <p>
+        A mature La Gloire-level ocean-going ironclad in 1845 is too advanced.
+        The necessary combination of armor production, hull design, engine power,
+        and naval doctrine is not ready yet.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Best Use in Fiction</h3>
+      <p>
+        Treat the project as a frightening prototype. It works just well enough
+        to scare diplomats, but not well enough to become a safe fleet standard.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Anglo-Dutch Steam Engine Program · Fictional Alternate-History Archive
+</footer>
+
+</body>
+</html>
